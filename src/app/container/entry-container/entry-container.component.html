@@ -1,0 +1,6 @@
+<app-entry-form></app-entry-form>
+<app-entry-list>
+  <app-entry *ngFor="let entry of entries" [entryid]="entry.id" [title]="entry.title" [email]="entry.email" [message]="entry.message" [createdAt]="entry.createdAt"></app-entry>
+  <div *ngIf="!entries && !isLoading">Leider gibt es noch keine Einträge!</div>
+  <div *ngIf="!entries && isLoading">Lade Einträge...</div>
+</app-entry-list>
