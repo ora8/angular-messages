@@ -1,3 +1,10 @@
-<p>
-  Formular ist nicht implementiert...
-</p>
+
+  <form novalidate (ngSubmit)='onSubmit()' #entryForm='ngForm'>
+    <label for='inputTitle'>Titel</label>
+    <input [(ngModel)]='entry.title' type='text' name='inputTitle'>
+    <label for='inputEmail'>Email</label>
+    <input [(ngModel)]='entry.email' type='text' name='inputEmail'>
+    <label for='textAreaMessage'>Message</label>
+    <textarea [(ngModel)]='entry.message' type='text' name='textAreaMessage'></textarea>
+    <input type='submit' name='buttonSubmit' value='Absenden'>
+    </form>

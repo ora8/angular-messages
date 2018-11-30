@@ -1,4 +1,4 @@
-export interface Entry {
+export class Entry {
   id: number;
   title: string;
   email: string;
