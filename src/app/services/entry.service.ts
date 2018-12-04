@@ -17,10 +17,6 @@ export class EntryService {
   }
 
   public addEntry(entry: Entry): Observable<Entry> {
-     return this.httpClient.post<Entry>(environment.apiBase + '/entry',  {
-       'title': entry.title,
-       'email': entry.email,
-       'message': entry.message
-      });
+     return this.httpClient.post<Entry>(environment.apiBase + '/entry',  entry);
   }
 }
